@@ -66,29 +66,25 @@
         </div>
       </div>
 
-      <!-- FOUR ROLES -->
-      <div class="roles-band">
-        <ul class="wrap roles">
+      <!-- FOUR ROLES — compact bar, part of the hero -->
+      <div class="wrap">
+        <ul class="roles" aria-label="What I bring">
           <li class="role-item">
             <span class="role-icon"><svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg></span>
-            <h2>Researcher</h2>
-            <p>Qualitative, mixed-methods and evidence-synthesis work in Nigeria and the UK.</p>
+            <span class="role-text"><strong>Researcher</strong><span>Qualitative &amp; mixed methods</span></span>
           </li>
           <li class="role-item">
             <span class="role-icon"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 2l2.5 6.5L21 9l-5 4.5L17.5 21 12 17l-5.5 4L8 13.5 3 9l6.5-.5L12 2z"/></svg></span>
-            <h2>Entrepreneur</h2>
-            <!-- REPLACE with one line about what you've founded or built -->
-            <p><span class="ph">[ONE LINE: what you’ve founded or built]</span></p>
+            <!-- REPLACE the placeholder with 2–4 words, e.g. "Founder, [venture]" -->
+            <span class="role-text"><strong>Entrepreneur</strong><span class="ph ph-sm">[2–4 words]</span></span>
           </li>
           <li class="role-item">
             <span class="role-icon"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5M14 4l-4 16"/></svg></span>
-            <h2>Engineer</h2>
-            <p>Software engineer who knows how digital health tools are built and tested.</p>
+            <span class="role-text"><strong>Engineer</strong><span>Software &amp; digital health</span></span>
           </li>
           <li class="role-item">
             <span class="role-icon"><svg aria-hidden="true" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M3 9h18M8 2v4M16 2v4M8 14l2 2 4-4"/></svg></span>
-            <h2>Project manager</h2>
-            <p>PRINCE2-certified; co-produces work with communities, students and staff.</p>
+            <span class="role-text"><strong>Project manager</strong><span>PRINCE2-certified</span></span>
           </li>
         </ul>
       </div>
@@ -102,7 +98,7 @@
             <p class="eyebrow">Selected projects</p>
             <h2 class="h2">What I’ve worked on</h2>
           </div>
-          <p class="count" aria-live="polite">Showing <span id="project-count">8</span> of <span id="project-total">8</span></p>
+          <p class="count" aria-live="polite">Showing <span id="project-count">6</span> of <span id="project-total">11</span></p>
         </div>
 
         <div class="filters" role="group" aria-label="Filter projects">
@@ -112,20 +108,23 @@
           <button type="button" class="filter" data-filter="evidence" aria-pressed="false">Evidence synthesis</button>
           <button type="button" class="filter" data-filter="digital" aria-pressed="false">Digital health</button>
           <button type="button" class="filter" data-filter="services" aria-pressed="false">Health services</button>
+          <button type="button" class="filter" data-filter="global" aria-pressed="false">Global health</button>
           <button type="button" class="filter" data-filter="delivery" aria-pressed="false">Project delivery</button>
         </div>
 
         <!--
           HOW TO EDIT A PROJECT CARD
+          - Order: the first 6 cards are shown by default, so keep your strongest work at the top.
           - Image: save it in assets/img/ and replace the <span class="ph">…</span> with
               <img src="assets/img/your-image.jpg" alt="Short description">
           - Link: replace href="#" (on the image AND the title) with your link —
               a PDF in assets/, a report, a poster, or an external page.
-          - Filters: data-tags can use any of: qual mixed evidence digital services delivery
+          - Filters: data-tags can use any of: qual mixed evidence digital services global delivery
         -->
+        <!-- The first 6 cards show by default; the rest appear with "Show all projects". Order = priority. -->
         <div class="projects">
 
-          <article class="card" data-tags="evidence digital">
+          <article class="card" data-tags="evidence digital global">
             <a class="card-img" href="#" aria-label="View project: Cultural adaptation of digital mental health interventions in Africa"><span class="ph">[IMAGE: e.g. PRISMA flow diagram]</span><span class="view">View project ↗</span></a>
             <div class="card-body">
               <p class="meta">Systematic review · 2026</p>
@@ -136,7 +135,7 @@
             </div>
           </article>
 
-          <article class="card" data-tags="qual digital">
+          <article class="card" data-tags="qual digital global">
             <a class="card-img" href="#" aria-label="View project: Youth-friendly HIV self-testing resources"><span class="ph">[IMAGE: workshop or resource]</span><span class="view">View project ↗</span></a>
             <div class="card-body">
               <p class="meta">Co-creation · 2024–2025</p>
@@ -144,17 +143,6 @@
               <p class="role"><b>Role</b> Programme Facilitator, Nigerian Institute of Medical Research</p>
               <p class="summary">Interviews, focus groups and co-designed digital resources to improve uptake among young people.</p>
               <ul class="tags"><li>Qualitative</li><li>Digital health</li></ul>
-            </div>
-          </article>
-
-          <article class="card" data-tags="evidence qual">
-            <a class="card-img" href="#" aria-label="View project: Scam resilience and digital literacy in young people"><span class="ph">[IMAGE: evidence map]</span><span class="view">View project ↗</span></a>
-            <div class="card-body">
-              <p class="meta">Scoping review · PAR · 2026</p>
-              <h3><a href="#">Scam resilience and digital literacy in young people</a></h3>
-              <p class="role"><b>Role</b> Research Assistant, Department of Psychology, University of Warwick</p>
-              <p class="summary">A scoping review that shaped participatory action research with young people.</p>
-              <ul class="tags"><li>Evidence synthesis</li><li>Qualitative</li></ul>
             </div>
           </article>
 
@@ -180,6 +168,39 @@
             </div>
           </article>
 
+          <article class="card" data-tags="evidence qual">
+            <a class="card-img" href="#" aria-label="View project: Scam resilience and digital literacy in young people"><span class="ph">[IMAGE: evidence map]</span><span class="view">View project ↗</span></a>
+            <div class="card-body">
+              <p class="meta">Scoping review · PAR · 2026</p>
+              <h3><a href="#">Scam resilience and digital literacy in young people</a></h3>
+              <p class="role"><b>Role</b> Research Assistant, Department of Psychology, University of Warwick</p>
+              <p class="summary">A scoping review that shaped participatory action research with young people.</p>
+              <ul class="tags"><li>Evidence synthesis</li><li>Qualitative</li></ul>
+            </div>
+          </article>
+
+          <article class="card" data-tags="global services">
+            <a class="card-img" href="https://ihvnigeria.org/achieve-project/" target="_blank" rel="noopener" aria-label="View project: ACHIEVE HIV programme (opens IHVN website)"><span class="ph">[IMAGE: field or programme photo]</span><span class="view">View project ↗</span></a>
+            <div class="card-body">
+              <p class="meta">Global health · 2025–</p>
+              <h3><a href="https://ihvnigeria.org/achieve-project/" target="_blank" rel="noopener">ACHIEVE: HIV and TB/HIV programme, Nigeria</a></h3>
+              <p class="role"><b>Role</b> Field Data Assistant, SCIDaR (for IHVN)</p>
+              <p class="summary">Programme data support for IHVN’s HIV and TB/HIV services across four Nigerian states.</p>
+              <ul class="tags"><li>Global health</li><li>Programme data</li></ul>
+            </div>
+          </article>
+
+          <article class="card" data-tags="global services">
+            <a class="card-img" href="https://www.akesishealthnigeria.org/nisrn" target="_blank" rel="noopener" aria-label="View project: Nigeria’s Integrated Specimen Referral Network (opens Akesis Health website)"><span class="ph">[IMAGE: specimen network or dashboard]</span><span class="view">View project ↗</span></a>
+            <div class="card-body">
+              <p class="meta">Global health · 2024–2025</p>
+              <h3><a href="https://www.akesishealthnigeria.org/nisrn" target="_blank" rel="noopener">Nigeria’s Integrated Specimen Referral Network (NISRN)</a></h3>
+              <p class="role"><b>Role</b> Project Data Assistant, Akesis Health</p>
+              <p class="summary">Data support for the national network that moves HIV and TB specimens from health facilities to laboratories.</p>
+              <ul class="tags"><li>Global health</li><li>Programme data</li></ul>
+            </div>
+          </article>
+
           <article class="card" data-tags="mixed services">
             <a class="card-img" href="#" aria-label="View project: Socially prescribed physical activity for adults 55+"><span class="ph">[IMAGE: study design graphic]</span><span class="view">View project ↗</span></a>
             <div class="card-body">
@@ -188,6 +209,17 @@
               <p class="role"><b>Role</b> Study designer, Neighbourhood Health Parks CIC</p>
               <p class="summary">A pre-post feasibility study with an embedded qualitative strand, from protocol to participant materials.</p>
               <ul class="tags"><li>Mixed methods</li><li>Health services</li></ul>
+            </div>
+          </article>
+
+          <article class="card" data-tags="delivery qual">
+            <a class="card-img" href="https://warwick.ac.uk/services/studentexperience/isse/wise/#further" target="_blank" rel="noopener" aria-label="View project: WISE Staff Toolkit (opens University of Warwick website)"><span class="ph">[IMAGE: toolkit screenshot]</span><span class="view">View project ↗</span></a>
+            <div class="card-body">
+              <p class="meta">Staff resource · 2026</p>
+              <h3><a href="https://warwick.ac.uk/services/studentexperience/isse/wise/#further" target="_blank" rel="noopener">WISE Staff Toolkit</a></h3>
+              <p class="role"><b>Role</b> Project Officer, University of Warwick</p>
+              <p class="summary">A toolkit helping Warwick staff understand and support international students, built from staff and student insight.</p>
+              <ul class="tags"><li>Co-production</li><li>Project delivery</li></ul>
             </div>
           </article>
 
@@ -214,6 +246,7 @@
           </article>
 
         </div>
+        <div class="more-row"><button type="button" class="btn btn-outline more-btn" aria-expanded="false">Show all projects</button></div>
         <p class="swipe-hint" aria-hidden="true">Swipe to see more →</p>
         <p class="no-results" hidden>No projects match this filter yet.</p>
       </div>
@@ -243,6 +276,10 @@
             <span class="panel-label">Credentials</span>
             <ul class="panel-chips"><li>BSc Microbiology, First Class</li><li>PRINCE2</li><li>NIHR Good Clinical Practice</li><li>NHS Edward Jenner</li><li>Google Data Analytics</li></ul>
           </div>
+          <div class="panel panel-wide">
+            <span class="panel-label">Awards</span>
+            <ul class="panel-chips"><li>Commonwealth Shared Scholarship</li><li>NYSC State Honours Award, 2020</li><li>Vice-Chancellor’s List &amp; Leadership Award, 2017–2019</li></ul>
+          </div>
         </div>
       </div>
     </section>
@@ -263,6 +300,38 @@
           <div class="photo"><span class="ph">[PHOTO: WORKSHOP]</span></div>
           <div class="photo"><span class="ph">[PHOTO: CONFERENCE]</span></div>
           <div class="photo"><span class="ph">[PHOTO: TEAM]</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= ORGANISATIONS (scrolling logo strip) ================= -->
+    <!--
+      HOW TO ADD LOGOS — no code editing needed:
+      Save each logo in assets/logos/ using the exact file name in data-logo, e.g.
+        assets/logos/warwick.png   (or warwick.svg)
+      The page shows the logo automatically once the file exists; until then it shows the name.
+      Tip: use logos on a transparent or white background. They display in greyscale for a tidy look.
+      To add or remove an organisation, add or delete one <li> line below.
+    -->
+    <section class="orgs" aria-labelledby="orgs-h">
+      <div class="wrap orgs-head">
+        <h2 id="orgs-h" class="orgs-label">Organisations I’ve worked with</h2>
+        <button type="button" class="orgs-pause" aria-pressed="false">Pause</button>
+      </div>
+      <div class="orgs-marquee">
+        <div class="orgs-track">
+          <ul class="org-list">
+            <li class="org" data-logo="warwick"><span>University of Warwick</span></li>
+            <li class="org" data-logo="uhcw"><span>UHCW NHS Trust</span></li>
+            <li class="org" data-logo="nimr"><span>Nigerian Institute of Medical Research</span></li>
+            <li class="org" data-logo="wihea"><span>WIHEA</span></li>
+            <li class="org" data-logo="cchub"><span>Co-Creation Hub</span></li>
+            <li class="org" data-logo="ihvn"><span>IHVN</span></li>
+            <li class="org" data-logo="scidar"><span>SCIDaR</span></li>
+            <li class="org" data-logo="akesis"><span>Akesis Health</span></li>
+            <li class="org" data-logo="access-bank"><span>Access Bank</span></li>
+            <li class="org" data-logo="i-scholar"><span>i-Scholar Initiative</span></li>
+          </ul>
         </div>
       </div>
     </section>
