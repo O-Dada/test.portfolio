@@ -86,6 +86,8 @@
       var img = new Image();
       img.alt = label;
       img.onload = function () {
+        // Square/round logos get a little more height so they match wide logos visually
+        if (img.naturalWidth / img.naturalHeight < 1.6) img.className = 'is-square';
         li.innerHTML = '';
         li.appendChild(img);
         syncClone();
