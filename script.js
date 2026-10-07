@@ -76,11 +76,11 @@
   var track = section.querySelector('.orgs-track');
   var pause = section.querySelector('.orgs-pause');
 
-  // Swap each name for its logo if assets/logos/<name>.svg or .png exists
+  // Swap each name for its logo if assets/img/logo-<name>.png (or .svg) exists
   list.querySelectorAll('.org[data-logo]').forEach(function (li) {
     var name = li.getAttribute('data-logo');
     var label = li.textContent.trim();
-    var exts = ['svg', 'png'];
+    var exts = ['png', 'svg'];
     (function tryNext(i) {
       if (i >= exts.length) return; // no logo file: keep the text name
       var img = new Image();
@@ -93,7 +93,7 @@
         syncClone();
       };
       img.onerror = function () { tryNext(i + 1); };
-      img.src = 'assets/logos/' + name + '.' + exts[i];
+      img.src = 'assets/img/logo-' + name + '.' + exts[i];
     })(0);
   });
 
