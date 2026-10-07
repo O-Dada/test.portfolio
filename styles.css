@@ -173,10 +173,21 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .footer-bar { border-top: 1px solid #2B4880; }
 .footer-inner { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; padding-top: 22px; padding-bottom: 22px; font-size: 13px; color: #B9C9E6; }
 
-/* ---------- Tablet ---------- */
-@media (max-width: 900px) {
+/* ---------- Tablet: keep photo beside the text, smaller ---------- */
+@media (min-width: 700px) and (max-width: 1040px) {
+  .hero-inner { display: grid; grid-template-columns: minmax(0, 1fr) 240px; gap: 40px; align-items: center; padding-top: 64px; padding-bottom: 64px; }
+  .portrait-wrap { width: 240px; }
+  .portrait { height: 290px; }
+  .badge { left: -20px; right: 0; padding: 12px; }
+  .badge-text strong { font-size: 12.5px; }
+  .badge-text span { font-size: 11.5px; }
+}
+
+@media (min-width: 641px) and (max-width: 960px) {
+  .roles { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .role-item { border-right: 0; border-bottom: 1px solid rgba(255,255,255,.22); }
-  .role-item:last-child { border-bottom: 0; }
+  .role-item:nth-child(odd) { border-right: 1px solid rgba(255,255,255,.22); }
+  .role-item:nth-last-child(-n+2) { border-bottom: 0; }
 }
 
 /* ---------- Phone ---------- */
@@ -184,11 +195,28 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   .wrap { padding-left: 16px; padding-right: 16px; }
   .section { padding-top: 64px; padding-bottom: 64px; }
   .section-tight { padding-top: 56px; padding-bottom: 64px; }
-  .hero-inner { padding-top: 48px; padding-bottom: 56px; gap: 40px; }
   .bio { font-size: 17px; }
-  .nav-links { gap: 6px 18px; }
-  .portrait { height: 320px; }
-  .badge { left: -8px; right: 8px; }
+
+  /* Compact one-row header: logo + CV button only */
+  .nav { flex-wrap: nowrap; padding-top: 10px; padding-bottom: 10px; }
+  .brand { font-size: 16px; gap: 10px; }
+  .brand-mark { width: 36px; height: 36px; font-size: 16px; }
+  .nav-links { flex-wrap: nowrap; }
+  .nav-links a:not(.btn) { display: none; }
+  .btn-sm { min-height: 40px; padding: 8px 14px; font-size: 14px; }
+}
+
+/* Phone hero: photo first, compact, with the MSc badge underneath */
+@media (max-width: 699px) {
+  .hero-inner { padding-top: 32px; padding-bottom: 48px; gap: 28px; }
+  .hero-visual { order: -1; flex-basis: 100%; justify-content: flex-start; }
+  .portrait-wrap { width: 100%; padding-bottom: 0; display: flex; align-items: center; gap: 16px; }
+  .portrait-offset { display: none; }
+  .portrait { width: 112px; height: 132px; flex: 0 0 112px; border-radius: 8px; }
+  .badge { position: static; flex: 1; box-shadow: none; padding: 12px; }
+}
+
+@media (max-width: 640px) {
   .roles { grid-template-columns: 1fr 1fr; padding-left: 0; padding-right: 0; }
   .role-item { padding: 22px 16px; border-bottom: 1px solid rgba(255,255,255,.22); }
   .role-item:nth-child(odd) { border-right: 1px solid rgba(255,255,255,.22); }
