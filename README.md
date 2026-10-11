@@ -12,16 +12,20 @@ It's a plain static site: HTML, CSS and a little JavaScript. No framework and no
 
 GitHub Pages hosts it from the `main` branch, and the domain is managed in Cloudflare.
 
+The Writing section pulls in my latest Medium posts. A small GitHub Action checks my Medium feed every morning and saves the newest posts to `assets/data/medium.json`, so when I publish on Medium the site catches up on its own within a day. If I want it to update straight away, I go to **Actions → Update Medium posts → Run workflow**.
+
 ## What's in here
 
 | File | What it does |
 |---|---|
 | `index.html` | All the content on the page. Most of my edits happen here. |
 | `styles.css` | Colours, fonts and layout. The colours are at the very top. |
-| `script.js` | The project filters, the "Show all projects" button and the scrolling logo strip. |
+| `script.js` | The project filters, the "Show all projects" button, the scrolling logo strip and the Writing section. |
 | `CNAME` | Connects the site to olanrewajudada.com. Don't delete it. |
 | `assets/Olanrewaju-Dada-CV.pdf` | My CV. Both "Download CV" buttons point to this file. |
 | `assets/img/` | My portrait, project covers, gallery photos and organisation logos. |
+| `assets/data/medium.json` | My latest Medium posts, used by the Writing section. Updated automatically. |
+| `.github/workflows/medium-posts.yml` | The daily job that refreshes `medium.json` from my Medium feed. |
 
 ## How I update the site
 

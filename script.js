@@ -121,3 +121,50 @@
     });
   }
 })();
+
+// Writing: show my latest Medium posts from assets/data/medium.json
+// (that file is refreshed daily by .github/workflows/medium-posts.yml)
+(function () {
+  var section = document.getElementById('writing');
+  if (!section || !window.fetch) return;
+  var list = section.querySelector('.posts');
+  var empty = section.querySelector('.posts-empty');
+  var SHOW = 3;
+
+  function formatDate(iso) {
+    var p = (iso || '').split('-');
+    if (p.length !== 3) return '';
+    var d = new Date(+p[0], +p[1] - 1, +p[2]);
+    return d.toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' });
+  }
+  function el(tag, cls, text) {
+    var e = document.createElement(tag);
+    if (cls) e.className = cls;
+    if (text) e.textContent = text;
+    return e;
+  }
+
+  fetch('assets/data/medium.json', { cache: 'no-cache' })
+    .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
+    .then(function (data) {
+      var posts = (data.posts || []).slice(0, SHOW);
+      if (!posts.length) throw new Error('no posts');
+      posts.forEach(function (p) {
+        var li = el('li', 'post');
+        var a = el('a', 'post-link');
+        a.href = p.url;
+        a.target = '_blank';
+        a.rel = 'noopener';
+        var meta = formatDate(p.date);
+        if (p.minutes) meta += (meta ? ' · ' : '') + p.minutes + ' min read';
+        a.appendChild(el('span', 'post-date', meta));
+        a.appendChild(el('h3', 'post-title', p.title));
+        if (p.excerpt) a.appendChild(el('p', 'post-excerpt', p.excerpt));
+        a.appendChild(el('span', 'post-more', 'Read on Medium ↗'));
+        li.appendChild(a);
+        list.appendChild(li);
+      });
+      list.hidden = false;
+    })
+    .catch(function () { if (empty) empty.hidden = false; });
+})();
