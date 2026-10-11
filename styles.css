@@ -186,6 +186,16 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .panel-chips { display: flex; flex-wrap: wrap; gap: 8px; }
 .panel-chips li { padding: 4px 10px; border-radius: 4px; background: rgba(255,255,255,.16); color: #fff; font-size: 12.5px; font-weight: 600; }
 
+/* ---------- Publications ---------- */
+#publications { border-bottom: 1px solid var(--line); }
+.pubs { display: flex; flex-direction: column; gap: 14px; }
+.pub { display: flex; flex-wrap: wrap; align-items: flex-start; gap: 10px 28px; padding: 22px 24px; border: 1px solid var(--line); border-radius: var(--radius); background: #fff; }
+.pub-status { flex: 0 0 190px; padding-top: 5px; font-size: 12px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--blue); }
+.pub-status-done { color: var(--muted); }
+.pub-body { flex: 1 1 460px; min-width: 0; display: flex; flex-direction: column; gap: 6px; }
+.pub-title { font-family: var(--font-display); font-size: 21px; font-weight: 600; line-height: 1.3; color: var(--ink); }
+.pub-meta { font-size: 14.5px; color: var(--muted); }
+
 /* ---------- Gallery ---------- */
 .gallery-section { border-top: 1px solid var(--line); }
 .note { font-size: 14px; color: var(--muted); font-style: italic; }
@@ -200,13 +210,17 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 
 /* ---------- Contact / footer ---------- */
 .contact { background: var(--blue-deep); color: #fff; }
-.contact-inner { padding-top: 80px; padding-bottom: 80px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 40px; }
-.contact-text { flex: 999 1 520px; min-width: 0; display: flex; flex-direction: column; gap: 14px; }
-.contact-text h2 { font-family: var(--font-display); font-weight: 500; font-size: clamp(30px, 4vw, 42px); line-height: 1.1; }
-.contact-actions { flex: 1 1 300px; display: flex; flex-direction: column; gap: 16px; }
-.contact-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px 20px; font-size: 15px; font-weight: 600; }
-.contact-links a { color: #D5DEE8; }
-.contact-links a:hover { color: #fff; }
+.contact-inner { padding-top: 72px; padding-bottom: 64px; display: flex; flex-direction: column; gap: 28px; }
+.contact-head { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; }
+.contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr)); gap: 14px; }
+.contact-tile { display: flex; align-items: center; gap: 14px; min-height: 84px; padding: 18px 20px; border: 1px solid rgba(255,255,255,.18); border-radius: var(--radius); background: rgba(255,255,255,.06); color: #fff; text-decoration: none; transition: background-color .15s ease, border-color .15s ease, transform .15s ease; }
+.contact-tile:hover { background: rgba(255,255,255,.12); border-color: rgba(255,255,255,.45); color: #fff; transform: translateY(-2px); }
+.ct-icon { width: 44px; height: 44px; flex: 0 0 44px; border-radius: 8px; background: #fff; display: flex; align-items: center; justify-content: center; }
+.ct-icon svg { width: 22px; height: 22px; fill: none; stroke: var(--blue); stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.ct-text { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.ct-text strong { font-size: 17px; line-height: 1.25; }
+.ct-text span { font-size: 13.5px; color: #B9C9E6; }
+.ct-arrow { margin-left: auto; color: #A9C2F0; font-size: 18px; }
 .footer-bar { border-top: 1px solid #2B4880; }
 .footer-inner { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; padding-top: 22px; padding-bottom: 22px; font-size: 13px; color: #B9C9E6; }
 
@@ -282,7 +296,9 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
   .orgs-track { animation-duration: 60s; }
   .photo .ph { font-size: 11px; padding: 2px 6px; }
 
-  .contact-actions { flex-basis: 100%; }
+  .pub { padding: 18px; }
+  .pub-title { font-size: 19px; }
+  .contact-inner { padding-top: 56px; padding-bottom: 48px; }
 }
 @media (max-width: 360px) {
   .role-icon { display: none; }
