@@ -1,60 +1,58 @@
-# Olanrewaju Dada — Portfolio Website
+# olanrewajudada.com
 
-A static portfolio site (plain HTML, CSS and a little JavaScript) hosted on GitHub Pages. No build tools needed.
+This is the code behind my portfolio website, [olanrewajudada.com](https://olanrewajudada.com).
 
-## Files
+I built it to sit alongside my CV when I apply for PhD positions and speak with potential supervisors. My CV lists what I've done. This site shows it: the projects, the people and organisations I've worked with, and the research that came out of it.
 
-```
-index.html     ← all the page content (edit text here)
-styles.css     ← colours, fonts and layout (colours are at the very top)
-script.js      ← project filters + footer year
-assets/
-  favicon.svg               ← browser-tab icon
-  img/                      ← portrait, project images, gallery photos
-  Olanrewaju-Dada-CV.pdf    ← ADD your CV with exactly this name
-```
+I'm a health researcher working mainly with qualitative and mixed methods, with a background in digital health, software engineering and project management. I wanted one place that brings all of that together.
 
----
+## How it's built
 
-## Updating the live site (replacing the old version)
+It's a plain static site: HTML, CSS and a little JavaScript. No framework and no build step, so what's in this repository is exactly what goes live.
 
-1. Open your repository on GitHub.
-2. Click **Add file → Upload files**.
-3. Drag in `index.html`, `styles.css`, `script.js`, `README.md` and the `assets` folder from this download.
-   Files with the same name are **replaced** automatically.
-4. Click **Commit changes**.
-5. Wait 1–2 minutes, then hard-refresh the site (**Ctrl + Shift + R**, or **Cmd + Shift + R** on a Mac).
-   The **Actions** tab shows a green tick when it's live.
+GitHub Pages hosts it from the `main` branch, and the domain is managed in Cloudflare.
 
-### Your site address
+## What's in here
 
-Your GitHub username is **O-Dada**, so:
+| File | What it does |
+|---|---|
+| `index.html` | All the content on the page. Most of my edits happen here. |
+| `styles.css` | Colours, fonts and layout. The colours are at the very top. |
+| `script.js` | The project filters, the "Show all projects" button and the scrolling logo strip. |
+| `CNAME` | Connects the site to olanrewajudada.com. Don't delete it. |
+| `assets/Olanrewaju-Dada-CV.pdf` | My CV. Both "Download CV" buttons point to this file. |
+| `assets/img/` | My portrait, project covers, gallery photos and organisation logos. |
 
-- Repository named `olanrewajudada.github.io` → site at **https://o-dada.github.io/olanrewajudada.github.io/**
-- Rename the repository to **`O-Dada.github.io`** (Settings → General → Repository name) → site at **https://o-dada.github.io**
+## How I update the site
 
----
+1. Make the change in `index.html` (text) or `styles.css` (look).
+2. On GitHub, go to **Add file → Upload files**, drag the file in and click **Commit changes**.
+3. Wait for the green tick in the **Actions** tab, then refresh the site with **Ctrl + Shift + R**.
 
-## Before you share the link — checklist
+### Things I learnt the hard way
 
-- [ ] **Search `index.html` for `[`** — every `[LIKE THIS]` placeholder needs real content.
-- [ ] **Entrepreneur** line in the blue roles band.
-- [ ] **Bio** in the hero — make sure it sounds like you.
-- [ ] **CV** saved as `assets/Olanrewaju-Dada-CV.pdf` (both "Download CV" buttons point to it).
-- [ ] **Portrait** saved as `assets/img/portrait.jpg` (see the `REPLACE` comment in the hero).
-- [ ] **Project images and links** for each card (see the `HOW TO EDIT A PROJECT CARD` comment).
-- [ ] **Gallery photos** — only use photos of others with their consent.
-- [ ] **Contact links** — search for `href="#"` and `you@example.com`.
-- [ ] **Social preview image** (1200×630) at `assets/img/og-image.jpg` for LinkedIn/WhatsApp previews.
-- [ ] Check the site on your phone — project cards become a swipeable row there.
+- **Start from the version on GitHub, not an old copy on my laptop.** Otherwise I undo changes I made directly on GitHub.
+- **Clear out my Downloads folder first.** If an old `index.html` is already there, the browser saves the new one as `index (1).html`, and it's easy to upload the wrong one.
+- **Never upload a file with "(1)" in the name.** GitHub adds it as a new file instead of replacing the old one, so the site doesn't change.
+- **Keep the repository public.** On a free account, making it private takes the site offline.
 
-## Tailoring for each PhD application
+## Quick edits
 
-- Change the **Currently exploring** text (search for `EDIT PER APPLICATION`).
-- Point supervisors to a filter, e.g. "see the Qualitative projects".
+**Adding a project.** Copy one `<article class="card">…</article>` block in `index.html` and change the text, link and image. Projects run newest first. The `data-tags` decide which filter a project shows under: `qual`, `mixed`, `digital`, `services`, `global` or `delivery`. The count updates by itself.
 
-## Common edits
+**Adding a publication.** Copy one `<li class="pub">…</li>` block. To link the title, wrap it in `<a href="...">Title</a>`.
 
-- **Change the blue**: edit `--blue` at the top of `styles.css`.
-- **Add a project**: copy one `<article class="card">…</article>` block and set `data-tags` to any of `qual mixed evidence digital services delivery`. The filter count updates automatically.
-- **Custom domain (optional, ~£10/year)**: buy a domain, then add it under **Settings → Pages → Custom domain**.
+**Adding an organisation logo.** Save it in `assets/img/` as `logo-` plus the name in that organisation's `data-logo`, e.g. `logo-wihea.png`. Until the file is there, the strip just shows the name.
+
+**Updating my CV.** Upload the new PDF to `assets/` with exactly the same name, `Olanrewaju-Dada-CV.pdf`.
+
+**Changing the blue.** Edit `--blue` at the top of `styles.css`.
+
+## Still to do
+
+- [ ] Add my Google Scholar link in the Publications section and the footer (search for `GS-LINK`)
+- [ ] Add logos for WIHEA and Akesis Health
+
+## Get in touch
+
+If you've found this through GitHub and want to talk about research, a project or a PhD opportunity, you can email me at [hello@olanrewajudada.com](mailto:hello@olanrewajudada.com) or find me on [LinkedIn](https://www.linkedin.com/in/lanredada).
