@@ -1,7 +1,8 @@
 // Project filters + "Show all projects".
 // Each <article class="card"> lists its tags in data-tags. Card order = priority.
 (function () {
-  var LIMIT = 6; // cards shown before "Show all projects"
+  var LIMIT = 6;       // cards shown before "Show all projects" on tablets and laptops
+  var LIMIT_PHONE = 3; // ...and on phones
   var buttons = document.querySelectorAll('.filter');
   var cards = Array.prototype.slice.call(document.querySelectorAll('.projects .card'));
   var countEl = document.getElementById('project-count');
@@ -21,18 +22,19 @@
       var tags = (card.getAttribute('data-tags') || '').split(/\s+/);
       return current === 'all' || tags.indexOf(current) !== -1;
     });
-    // Limit only applies to "All" on larger screens (phones use a swipe row)
-    var limited = current === 'all' && !expanded && !phone.matches && matches.length > LIMIT;
+    // The limit only applies to "All"; picking a filter shows every match
+    var limit = phone.matches ? LIMIT_PHONE : LIMIT;
+    var limited = current === 'all' && !expanded && matches.length > limit;
     var shown = 0;
     cards.forEach(function (card) {
       var idx = matches.indexOf(card);
-      var visible = idx !== -1 && (!limited || idx < LIMIT);
+      var visible = idx !== -1 && (!limited || idx < limit);
       card.hidden = !visible;
       if (visible) shown += 1;
     });
     if (countEl) countEl.textContent = shown;
     if (noResults) noResults.hidden = shown !== 0;
-    if (moreRow) moreRow.hidden = !(current === 'all' && !phone.matches && matches.length > LIMIT);
+    if (moreRow) moreRow.hidden = !(current === 'all' && matches.length > limit);
     if (moreBtn) {
       moreBtn.textContent = expanded ? 'Show fewer projects' : 'Show all ' + matches.length + ' projects';
       moreBtn.setAttribute('aria-expanded', expanded ? 'true' : 'false');
