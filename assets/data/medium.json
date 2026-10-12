@@ -1,11 +1,125 @@
 {
   "profile": "https://medium.com/@oolanrewajudada",
   "posts": [
-    { "title": "Learning How to Learn", "url": "https://medium.com/@oolanrewajudada/learning-how-to-learn-bf6828e2b49a", "date": "2023-06-04", "excerpt": "", "tags": ["software-engineering", "learning", "coding"] },
-    { "title": "Consistency: A Code of Success for Aspiring Developers (3)", "url": "https://medium.com/@oolanrewajudada/consistency-a-code-of-success-for-aspiring-developers-3-6e77a58a64f5", "date": "2023-05-28", "excerpt": "", "tags": ["technology", "software-engineering", "consistency"] },
-    { "title": "Consistency: A Code of Success for Aspiring Developers (2)", "url": "https://medium.com/@oolanrewajudada/consistency-a-code-of-success-for-aspiring-developers-2-faaa00800e5a", "date": "2023-05-28", "excerpt": "", "tags": ["consistency", "tech", "coding"] },
-    { "title": "The Code of Success for Aspiring Developers", "url": "https://medium.com/@oolanrewajudada/the-code-of-success-for-aspiring-developers-65bcbba74e6c", "date": "2023-05-26", "excerpt": "", "tags": ["learning-to-code", "consistency", "developer"] },
-    { "title": "Journeying through Software Engineering: Progress and Reflections", "url": "https://medium.com/@oolanrewajudada/journeying-through-software-engineering-progress-and-reflections-380467b77366", "date": "2023-05-25", "excerpt": "", "tags": ["reflections-of-life", "updates", "tech"] },
-    { "title": "The Mindset of a Software Developer", "url": "https://medium.com/@oolanrewajudada/the-mindset-of-a-software-developer-7e41d96fff95", "date": "2023-05-24", "excerpt": "", "tags": ["software-development", "mindset-shift", "tech"] }
+    {
+      "title": "Learning How to Learn",
+      "url": "https://medium.com/@oolanrewajudada/learning-how-to-learn-bf6828e2b49a",
+      "date": "2023-06-04",
+      "excerpt": "Software engineering is a field characterized by unending learning. This is because technology is a field where change is a constant. New technologies come with rapid change. And with such a rapidly…",
+      "minutes": 2,
+      "tags": [
+        "software-engineering",
+        "learning",
+        "coding"
+      ]
+    },
+    {
+      "title": "Consistency: A Code of Success for Aspiring Developers (3)",
+      "url": "https://medium.com/@oolanrewajudada/consistency-a-code-of-success-for-aspiring-developers-3-6e77a58a64f5",
+      "date": "2023-05-28",
+      "excerpt": "Thank you for consistently reading these posts. It’s a testament to the impact this topic has on us. Over the past weeks, we’ve covered what consistency is and the various areas it can be applied to,…",
+      "minutes": 2,
+      "tags": [
+        "technology",
+        "software-engineering",
+        "consistency"
+      ]
+    },
+    {
+      "title": "Consistency: A Code of Success for Aspiring Developers (2)",
+      "url": "https://medium.com/@oolanrewajudada/consistency-a-code-of-success-for-aspiring-developers-2-faaa00800e5a",
+      "date": "2023-05-28",
+      "excerpt": "Dear reader, welcome back once again. Like I mentioned last week, this is a continuation into our series on consistency. Last week, I introduced this topic by explaining the importance of…",
+      "minutes": 2,
+      "tags": [
+        "consistency",
+        "tech",
+        "coding"
+      ]
+    },
+    {
+      "title": "The Code of Success for Aspiring Developers",
+      "url": "https://medium.com/@oolanrewajudada/the-code-of-success-for-aspiring-developers-65bcbba74e6c",
+      "date": "2023-05-26",
+      "excerpt": "There is one interesting trait frequently associated with success across different walks of life. This trait is the foundation on which the dynasty of successful billionaires is built. To bring it…",
+      "minutes": 1,
+      "tags": [
+        "learning-to-code",
+        "consistency",
+        "developer"
+      ]
+    },
+    {
+      "title": "Journeying through Software Engineering: Progress and Reflections",
+      "url": "https://medium.com/@oolanrewajudada/journeying-through-software-engineering-progress-and-reflections-380467b77366",
+      "date": "2023-05-25",
+      "excerpt": "Phew! The weeks have flown by so fast. I checked my calendar today and discovered that we are already six weeks into our software engineering trainee program, which is a significant milestone. As…",
+      "minutes": 1,
+      "tags": [
+        "reflections-of-life",
+        "updates",
+        "tech"
+      ]
+    },
+    {
+      "title": "The Mindset of a Software Developer",
+      "url": "https://medium.com/@oolanrewajudada/the-mindset-of-a-software-developer-7e41d96fff95",
+      "date": "2023-05-24",
+      "excerpt": "Before joining i-Academy, I had some decent understanding of the software engineering ecosystem, but despite my level of exposure, I never thought I was capable of learning to code. I assume this was…",
+      "minutes": 2,
+      "tags": [
+        "software-development",
+        "mindset-shift",
+        "tech"
+      ]
+    },
+    {
+      "title": "PROBLEM SOLVING 101: A Guide to Overcoming Challenges",
+      "url": "https://medium.com/@oolanrewajudada/problem-solving-101-a-guide-to-overcoming-challenges-6ea0249ac785",
+      "date": "2023-05-23",
+      "excerpt": "Welcome, dear reader, to my journey in software engineering at i-Academy. As I reflect on my fourth week, I am grateful for encountering challenges that have shifted my mindset towards…",
+      "minutes": 2,
+      "tags": [
+        "technology",
+        "coding",
+        "gui̇de"
+      ]
+    },
+    {
+      "title": "An Indigenous Vocabulary for Software Developers",
+      "url": "https://medium.com/@oolanrewajudada/an-indigenous-vocabulary-for-software-developers-e5c7041aa041",
+      "date": "2023-05-15",
+      "excerpt": "There is a word in the Igbo language that never fails to motivate and encourage me, especially when I am feeling down. That phrase is “ Kwechiri ,” which translates to “Don’t give up!” Even the sound…",
+      "minutes": 2,
+      "tags": [
+        "software-development",
+        "coding",
+        "technology"
+      ]
+    },
+    {
+      "title": "CAN DISTRACTIONS BE HELPFUL IN LEARNING TECH",
+      "url": "https://medium.com/@oolanrewajudada/can-distractions-be-helpful-in-learning-tech-ef95d50f3f5b",
+      "date": "2023-05-12",
+      "excerpt": "Truth be told, software engineering is an entirely engaging skill that requires a great deal commitment in time, energy and resources. Regardless of where you are in your journey, there will be times…",
+      "minutes": 1,
+      "tags": [
+        "motivation",
+        "tech",
+        "coding"
+      ]
+    },
+    {
+      "title": "MY EXPERIENCE BUILDING ROME AT i-ACADEMY",
+      "url": "https://medium.com/@oolanrewajudada/my-experience-building-rome-at-i-academy-63281477df8f",
+      "date": "2023-05-09",
+      "excerpt": "“Rome wasn’t built in a day.” This, right here, was my most relatable quote of the past week. And amidst the experiences and challenges of the past week, I’m grateful that it ended on a positive…",
+      "minutes": 3,
+      "tags": [
+        "technology",
+        "beginners-guide",
+        "codingbootcamp"
+      ]
+    }
   ]
 }
